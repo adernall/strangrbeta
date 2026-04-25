@@ -2,7 +2,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '../lib/AuthContext'
-import Sidebar from './Sidebar'
+import Sidebar from './sidebar'
 import TopBar from './TopBar'
 import BottomNav from './BottomNav'
 import styles from './AppShell.module.css'
