@@ -1,0 +1,434 @@
+/* ── PAGE ──────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+}
+
+/* ── NAV ────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.navInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.logoDot {
+  color: #c8ff00;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.navLinks {
+  display: flex;
+  gap: 36px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #666;
+  transition: color 0.2s;
+}
+.navLink:hover { color: #fff; }
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.loginBtn {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #888;
+  transition: color 0.2s;
+}
+.loginBtn:hover { color: #fff; }
+
+/* Lime green pill — used in nav + footer CTA */
+.joinBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  background: #c8ff00;
+  color: #000;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  border-radius: 9999px;
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.joinBtn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* ── HERO ───────────────────────────────────────── */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 180px 40px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.heroBeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #2a2a2a;
+  border-radius: 9999px;
+  padding: 7px 18px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #888;
+  align-self: flex-start;
+}
+
+.betaDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c8ff00;
+  flex-shrink: 0;
+}
+
+.heroTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(64px, 9vw, 120px);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.heroLoud {
+  font-style: italic;
+  font-weight: 700;
+  color: #444;
+}
+
+.heroSub {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+/* White outline pill */
+.ctaOutline {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 9999px;
+  border: 1.5px solid #fff;
+  transition: background 0.2s, color 0.2s;
+}
+.ctaOutline:hover { background: #fff; color: #000; }
+
+/* Dark filled pill */
+.ctaDark {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 9999px;
+  border: 1.5px solid #222;
+  transition: border-color 0.2s;
+}
+.ctaDark:hover { border-color: #444; }
+
+/* ── STATS ──────────────────────────────────────── */
+.stats {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid #1a1a1a;
+}
+
+.stat {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-right: 1px solid #1a1a1a;
+}
+.stat:last-child { border-right: none; }
+.stat:not(:first-child) { padding-left: 40px; }
+
+.statValue {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #555;
+}
+
+/* ── MANIFESTO ──────────────────────────────────── */
+.manifesto {
+  border-top: 1px solid #1a1a1a;
+  padding: 100px 0;
+}
+
+.manifestoInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 60px;
+}
+
+.manifestoLeft {
+  padding-top: 6px;
+}
+
+.sectionTag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #555;
+}
+
+.manifestoRight {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.manifestoTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.manifestoWhite { color: #fff; }
+.manifestoGray  { color: #555; }
+
+.manifestoCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid #1a1a1a;
+}
+
+.manifestoCard {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-right: 1px solid #1a1a1a;
+}
+.manifestoCard:last-child { border-right: none; }
+
+.cardIcon {
+  color: #c8ff00;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.cardText {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ── SPACES ─────────────────────────────────────── */
+.spaces {
+  border-top: 1px solid #1a1a1a;
+  padding: 100px 0;
+}
+
+.spacesInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.spacesHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spacesTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.spacesEmpty {
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.spacesEmptyText {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ── BOTTOM CTA ─────────────────────────────────── */
+.bottomCta {
+  border-top: 1px solid #1a1a1a;
+  padding: 120px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.sparkle {
+  font-size: 28px;
+  color: #c8ff00;
+  line-height: 1;
+}
+
+.bottomCtaTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(36px, 5.5vw, 72px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.ctaWhite { color: #fff; }
+.ctaGray  { color: #555; font-style: italic; font-weight: 700; }
+
+/* ── FOOTER ─────────────────────────────────────── */
+.footer {
+  border-top: 1px solid #1a1a1a;
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.footerLogo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footerCopy {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #444;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 28px;
+}
+
+.footerLink {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #555;
+  transition: color 0.2s;
+}
+.footerLink:hover { color: #fff; }
+
+/* ── RESPONSIVE ─────────────────────────────────── */
+@media (max-width: 900px) {
+  .navLinks { display: none; }
+  .hero { padding: 140px 24px 60px; }
+  .stats { padding: 0 24px 80px; grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .manifestoInner { grid-template-columns: 1fr; gap: 32px; }
+  .manifestoCards { grid-template-columns: 1fr; }
+  .manifestoCard { border-right: none; border-bottom: 1px solid #1a1a1a; }
+  .manifestoCard:last-child { border-bottom: none; }
+  .spacesInner { padding: 0 24px; }
+  .footer { padding: 24px; flex-direction: column; align-items: flex-start; gap: 12px; }
+}

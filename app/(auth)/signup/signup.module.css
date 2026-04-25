@@ -1,0 +1,232 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: var(--nav-h);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text);
+}
+.close {
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.close:hover { color: var(--text); }
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.025em;
+}
+.sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: -12px;
+}
+
+.error {
+  padding: 12px 16px;
+  background: rgba(192,57,43,0.1);
+  border: 1px solid rgba(192,57,43,0.25);
+  border-radius: var(--r-md);
+  font-size: 13px;
+  color: #e74c3c;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.labelHint {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+}
+
+.inputWrap {
+  position: relative;
+}
+.prefix {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.inputPrefixed { padding-left: 28px !important; }
+
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text);
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+.input::placeholder { color: var(--text-dim); }
+.input:focus { border-color: var(--border-hover); }
+
+/* Invite code gets a monospace feel */
+.inputCode {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-color: var(--accent-dark);
+}
+.inputCode:focus { border-color: var(--accent); }
+
+/* Terms checkbox */
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  line-height: 1.5;
+}
+.checkbox {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--border-hover);
+  border-radius: 4px;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+.checkbox:checked { background: var(--text); border-color: var(--text); }
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px; left: 4px;
+  width: 4px; height: 7px;
+  border: 2px solid var(--bg);
+  border-top: none; border-left: none;
+  transform: rotate(45deg);
+}
+.termsLink {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.submit {
+  width: 100%;
+  padding: 13px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--r-md);
+  transition: opacity 0.2s;
+}
+.submit:hover:not(:disabled) { opacity: 0.88; }
+.submit:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.googleBtn {
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.googleBtn:hover { border-color: var(--border-hover); background: #1f1f1f; }
+
+.switchText {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+.switchLink {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .fieldRow { grid-template-columns: 1fr; }
+}

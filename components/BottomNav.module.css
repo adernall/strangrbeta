@@ -1,0 +1,60 @@
+/* Only shows on mobile */
+.nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(0,0,0,0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid #1a1a1a;
+    z-index: 50;
+    padding: 0 8px;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #444;
+  flex: 1;
+  padding: 8px 0;
+  transition: color 0.15s;
+}
+.navItem:hover { color: #888; }
+
+.navItemActive { color: #fff; }
+
+.navLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Center create button */
+.createBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #c8ff00;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.createBtn:hover { opacity: 0.88; }

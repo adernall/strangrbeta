@@ -1,0 +1,168 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  background: #000;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  z-index: 50;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 24px;
+  margin-bottom: 32px;
+}
+.logoDot { color: #c8ff00; font-size: 18px; line-height: 1; }
+
+/* Nav */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  padding: 0 12px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.15s, background 0.15s;
+  position: relative;
+  text-decoration: none;
+}
+.navItem:hover { color: #fff; background: #0f0f0f; }
+
+.navItemActive {
+  color: #fff;
+  background: #0f0f0f;
+}
+
+.navIcon { display: flex; align-items: center; flex-shrink: 0; }
+.navLabel { flex: 1; }
+
+.activeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c8ff00;
+  flex-shrink: 0;
+}
+
+/* Create button */
+.createBtn {
+  margin: 16px 12px;
+  padding: 12px 16px;
+  background: #c8ff00;
+  color: #000;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.createBtn:hover { opacity: 0.88; }
+
+/* Profile row */
+.profileRow {
+  padding: 12px;
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.profileLink:hover { background: #0f0f0f; }
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #1a1a1a;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatarImg { width: 100%; height: 100%; object-fit: cover; }
+.avatarInitial {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #555;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.profileName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profileHandle {
+  font-size: 11px;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.signOutBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.signOutBtn:hover { color: #fff; background: #1a1a1a; }
+
+/* Hide on mobile — BottomNav takes over */
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+}

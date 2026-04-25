@@ -1,0 +1,40 @@
+.shell {
+  min-height: 100vh;
+  background: #000;
+}
+
+.main {
+  margin-left: 240px;    /* sidebar width */
+  padding-top: 60px;     /* topbar height */
+  min-height: 100vh;
+}
+
+/* Loading state */
+.loading {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c8ff00;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.7); }
+}
+
+/* Mobile — no sidebar, add bottom nav padding */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding-bottom: 64px;
+  }
+}
