@@ -1,0 +1,52 @@
+.page { min-height: 100vh; background: #000; display: flex; flex-direction: column; }
+.nav  { display: flex; align-items: center; padding: 0 40px; height: 64px; border-bottom: 1px solid #1a1a1a; }
+.logo { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 800; letter-spacing: 0.12em; color: #fff; display: flex; align-items: center; gap: 4px; }
+.dot  { color: #c8ff00; font-size: 18px; }
+
+.main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 24px; }
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  padding: 40px 32px;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 16px;
+}
+
+.loadingDot { width: 10px; height: 10px; border-radius: 50%; background: #c8ff00; animation: pulse 1.2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.6)} }
+
+.spaceIcon { width: 64px; height: 64px; border-radius: 14px; background: #111; border: 1px solid #1a1a1a; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.spaceIconImg { width: 100%; height: 100%; object-fit: cover; }
+.spaceIconLetter { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #444; }
+
+.title { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; color: #fff; letter-spacing: -0.025em; }
+.sub   { font-size: 14px; color: #555; line-height: 1.6; }
+.memberCount { font-size: 12px; color: #444; }
+.alreadyText { font-size: 13px; color: #c8ff00; font-weight: 600; }
+
+.successIcon { font-size: 36px; color: #c8ff00; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background: #c8ff00;
+  color: #000;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 8px;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  border: none;
+}
+.btn:hover:not(:disabled) { opacity: 0.88; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
